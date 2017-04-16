@@ -1,24 +1,26 @@
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <a href="#" class="navbar-toggler navbar-toggler-right"
+  <a routerLink="/#" class="navbar-toggler navbar-toggler-right"
           type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
           aria-controls="navbarTogglerDemo02" aria-expanded="false"
           aria-label="Toggle navigation"
-          (click)="toggleState()">
+          (click)="toggleState($event)">
     <span class="navbar-toggler-icon"></span>
   </a>
   <a class="navbar-brand" href="#">{{titulo}}</a>
 
 
+
+
   <div class="collapse navbar-collapse " [ngClass]="{ 'show': isShow }" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-md-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">{{inicio}} </a>
+        <a class="nav-link" routerLink="/home">{{inicio}} </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">{{nosotros}}</a>
+        <a class="nav-link" routerLink="/about">{{nosotros}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="#">{{contactanos}}</a>
+        <a class="nav-link " routerLink="/contact">{{contactanos}}</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

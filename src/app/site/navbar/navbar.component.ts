@@ -13,11 +13,10 @@ export class NavbarComponent {
     inicio = 'Inicio';
     buscar_place = 'Buscar en la web';
     Entrada = 'hola';
-
+    // store de state of toggle
     isShow = false;
-       // store state
-    toggleState() { // click handler
-        let bool = this.isShow;
-        this.isShow = bool === false ? true : false;
+    toggleState(event: Event) { // click handler
+        event.preventDefault();
+        this.isShow = this.isShow === false ? true : false;
     }
 }
